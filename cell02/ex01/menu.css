@@ -1,0 +1,20 @@
+.dropdown
+{
+	display: inline-block; 
+}
+
+.dropdown-child
+{
+	display: none;
+	background-color: cdcdcd;
+}
+
+.dropdown:hover .dropdown-child
+{
+	display: block;
+}
+
+.dropdown:hover
+{
+	background-color: cdcdcd
+}

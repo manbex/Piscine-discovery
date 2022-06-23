@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>calc</title>
+		<script>
+			function calc()
+			{
+				var n1 = document.getElementById("number1").value;
+				var n2 = document.getElementById("number2").value;
+				var select = document.getElementById("select").value;
+
+				n1 = parseFloat(n1);
+				n2 = parseFloat(n2);
+				if (!isNaN(n1) && !isNaN(n2) && Number.isInteger(n1) && Number.isInteger(n2) && n1 >= 0 && n2 >= 0)
+				{
+					if ((select == 4 || select == 5) && (n2 == 0))
+					{
+						console.log("It's over 9000!");
+						alert("It's over 9000!");
+					}
+					else
+					{
+						var result = (select == 1) ? n1 + n2 : ((select == 2) ? n1 - n2 : ((select == 3) ? n1 * n2 : ((select == 4) ? n1 / n2 : n1 % n2)));
+						console.log(result);
+						alert(result);
+					}
+				}
+				else
+				{
+					console.log("Error :(");
+					alert("Error :(")
+				}
+
+			}
+
+			setInterval(function()
+			{
+				alert("Please, use me...");
+			}, 30000);
+		</script>
+	</head>
+	<body>
+		<input type="text" id="number1">
+		<select id="select">
+			<option value="1">+</option>
+			<option value="2">-</option>
+			<option value="3">*</option>
+			<option value="4">/</option>
+			<option value="5">%</option>
+
+
+		</select>
+		<input type="text" id="number2">
+		<input type="submit" value="Try me!" onclick="calc()">
+	</body>
+<html>

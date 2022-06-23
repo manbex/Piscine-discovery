@@ -1,0 +1,42 @@
+body
+{
+	margin: 0px;
+}
+
+.parallax
+{
+	height: 100vh;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.parallax1
+{
+	background-image: url("https://wallpaperaccess.com/full/2151908.jpg");
+}
+
+.text1
+{
+	color: black;
+	font-size: 40px;
+}
+
+.text1:hover
+{
+	color:yellow;
+}
+
+.parallax2
+{
+	background-color: black;
+}
+
+.parallax3
+{
+	background-image: url("https://www.leschampsdudroit.fr/medias/org-4413/site-8444/img/2.jpg");
+}

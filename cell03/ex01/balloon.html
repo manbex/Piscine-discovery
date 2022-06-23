@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>balloon</title>
+		<script>
+			var color = ["#ff0000", "#00ff00", "#0000ff"];
+			var i = 0;
+
+			function increaseSize(size)
+			{
+				var size1 = parseInt(size);
+				if (size1 == 420)
+					size1 = 200;
+				else
+					size1 += 10;
+				return (size1 + "px");
+			}
+
+			function decreaseSize(size)
+                        {
+                                var size1 = parseInt(size);
+                                if (size1 > 200)
+					size1 -= 5;
+                                return (size1 + "px");
+                        }
+
+			function balloonClick(divObj)
+			{
+				i = i == 2 ? 0 : i + 1;
+				divObj.style.backgroundColor = color[i];
+				divObj.style.width = increaseSize(divObj.style.width);
+				divObj.style.height = increaseSize(divObj.style.height);
+			}
+
+			function mouseQuit(divObj)
+			{
+				i = i == 0 ? 2 : i - 1;
+				divObj.style.backgroundColor = color[i];
+				divObj.style.width = decreaseSize(divObj.style.width);
+                                divObj.style.height = decreaseSize(divObj.style.height);
+			}
+		</script>
+	</head>
+	<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0px;">
+		<div style="width: 200px; height: 200px; background-color: red; border-radius: 50%;" onclick="balloonClick(this)" onmouseleave="mouseQuit(this)"></div>
+	</body>
+</html>
